@@ -6,19 +6,19 @@ import '../../../../Constants/constants.dart';
 import '../../../../Widgets/my_text.dart';
 
 List<String> images = [
-  'assets/icons/page1.svg',
+  'assets/icons/bounceBack.svg',
   'assets/icons/page2.svg',
-  'assets/icons/page3.svg'
+  'assets/icons/snkrr.svg'
 ];
 List<String> textitles = [
-  'Schedule',
+  'BOUNCE BACK',
   'Stay Updated',
-  'Pickup',
+  'SNKRR BUCKS',
 ];
 List<String> textDescrip = [
-  'On your request our moustache man will be at your\ndoorstep in no time',
-  'Nice clean washing everytime',
-  'Delivery with in 72 hours and express\ndelivery on request'
+  'We want to be your Sneaker\nCare provider',
+  ' Never miss a moment, we’ll keep you\ninformed from drop off to delivery',
+  'Earn when you spend.'
 ];
 
 class IntroPage extends StatelessWidget {

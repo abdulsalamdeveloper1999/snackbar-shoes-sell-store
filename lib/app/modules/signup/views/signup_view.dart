@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:snackbar/Constants/constants.dart';
 import 'package:snackbar/Constants/form_validators.dart';
 import 'package:snackbar/app/routes/app_pages.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../Widgets/login_field.dart';
 import '../../../../Widgets/my_button.dart';
@@ -145,16 +146,12 @@ class _SignupViewState extends State<SignupView> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 15.h,
-                ),
+                SizedBox(height: 15.h),
                 Divider(
                   thickness: 1,
                   color: kprimaryColor.withOpacity(0.2),
                 ),
-                SizedBox(
-                  height: 30.h,
-                ),
+                SizedBox(height: 30.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -163,9 +160,7 @@ class _SignupViewState extends State<SignupView> {
                           Get.snackbar('Google', 'Sign up with Google');
                         },
                         child: SvgPicture.asset("assets/icons/google.svg")),
-                    SizedBox(
-                      width: 30.w,
-                    ),
+                    SizedBox(width: 30.w),
                     InkWell(
                         onTap: () {
                           Get.snackbar('Facebook', 'Sign up with Facebook');
@@ -173,9 +168,21 @@ class _SignupViewState extends State<SignupView> {
                         child: SvgPicture.asset("assets/icons/facebook.svg"))
                   ],
                 ),
-                SizedBox(
-                  height: 25.h,
+                SizedBox(height: 25.h),
+                Center(
+                  child: InkWell(
+                    onTap: _launchUrl,
+                    child: Text(
+                      'www.instagram.com/snkrrbar',
+                      style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: kfourweight,
+                        color: kprimaryColor,
+                      ),
+                    ),
+                  ),
                 ),
+                SizedBox(height: 25.h),
                 Center(
                   child: RichText(
                     text: TextSpan(children: [
@@ -225,3 +232,11 @@ Widget _TextFormField(
     ],
   );
 }
+
+Future<void> _launchUrl() async {
+  if (!await launchUrl(_url)) {
+    throw 'Could not launch $_url';
+  }
+}
+
+Uri _url = Uri.parse('https://www.instagram.com/snkrrbar');

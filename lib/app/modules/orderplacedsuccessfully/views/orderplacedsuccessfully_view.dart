@@ -33,7 +33,7 @@ class OrderplacedsuccessfullyView
               height: 10.h,
             ),
             MyText(
-              text: "Your order has been successfully",
+              text: "Your review has been successfully submitted",
               size: 12.sp,
               weight: ksevenweight,
               color: kwhitegreBlackyColor,

@@ -205,9 +205,7 @@ class OrderdetailsView extends GetView<OrderdetailsController> {
           Row(
             children: [
               SvgPicture.asset("$svgUri"),
-              SizedBox(
-                width: 21.w,
-              ),
+              SizedBox(width: 21.w),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -228,45 +226,7 @@ class OrderdetailsView extends GetView<OrderdetailsController> {
               )
             ],
           ),
-          Row(
-            children: [
-              Container(
-                width: 70.w,
-                height: 40.h,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        controller.decrement();
-                      },
-                      child: SvgPicture.asset(
-                        "assets/icons/remove.svg",
-                        height: 20.h,
-                        width: 20.w,
-                      ),
-                    ),
-                    Obx(
-                      () => MyText(
-                        text: "${controller.count}",
-                        color: kwhiteColor,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        controller.increment();
-                      },
-                      child: SvgPicture.asset(
-                        "assets/icons/positive.svg",
-                        height: 20.h,
-                        width: 20.w,
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ],
-          )
+          counterMethod()
         ],
       ),
     );
@@ -505,6 +465,71 @@ class OrderdetailsView extends GetView<OrderdetailsController> {
                   weight: ksixweight,
                   color: Colors.black,
                 ),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class counterMethod extends StatefulWidget {
+  counterMethod();
+  @override
+  _counterMethodState createState() => new _counterMethodState();
+}
+
+class _counterMethodState extends State<counterMethod> {
+  int _itemCount = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 70.w,
+      height: 40.h,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  if (_itemCount != 0) {
+                    _itemCount--;
+                  } else {
+                    _itemCount == 0;
+                  }
+                });
+                // _controller.decrement();
+              },
+              child: SvgPicture.asset(
+                "assets/icons/remove.svg",
+                height: 20.h,
+                width: 20.w,
+              ),
+            ),
+          ),
+          // Text(_itemCount.toString()),
+          Expanded(
+            child: Center(
+              child: MyText(
+                text: "${_itemCount.toString()}",
+                color: kwhiteColor,
+              ),
+            ),
+          ),
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                // _controller.increment();
+                setState(() {
+                  _itemCount++;
+                });
+              },
+              child: SvgPicture.asset(
+                "assets/icons/positive.svg",
+                height: 20.h,
+                width: 20.w,
               ),
             ),
           )

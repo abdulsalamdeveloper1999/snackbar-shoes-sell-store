@@ -16,8 +16,8 @@ List<String> textitles = [
   'SNKRR BUCKS',
 ];
 List<String> textDescrip = [
-  'We want to be your Sneaker\nCare provider',
-  ' Never miss a moment, we’ll keep you\ninformed from drop off to delivery',
+  'We want to be your Sneaker\nCare provider.',
+  ' Never miss a moment, we’ll keep you\ninformed from drop off to delivery.',
   'Earn when you spend.'
 ];
 

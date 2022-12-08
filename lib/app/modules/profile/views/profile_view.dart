@@ -173,11 +173,9 @@ class ProfileView extends GetView<ProfileController> {
           Row(
             children: [
               SvgPicture.asset('assets/icons/bnotification.svg'),
-              SizedBox(
-                width: 12.w,
-              ),
+              SizedBox(width: 12.w),
               MyText(
-                text: "Notification",
+                text: "Notifications",
                 size: 14.sp,
                 weight: kfourweight,
                 color: kwhiteColor,

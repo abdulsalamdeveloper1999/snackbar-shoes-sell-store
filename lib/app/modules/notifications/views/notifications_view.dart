@@ -88,7 +88,7 @@ class NotificationsView extends GetView<NotificationsController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               MyText(
-                text: "Notification Title",
+                text: "Notifications Title",
                 size: 14.sp,
                 weight: kfourweight,
                 color: kwhiteColor,

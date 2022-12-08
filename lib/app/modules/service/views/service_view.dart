@@ -218,11 +218,13 @@ class _counterMethodState extends State<counterMethod> {
               ),
             ),
           ),
-          Text(_itemCount.toString()),
+          // Text(_itemCount.toString()),
           Expanded(
-            child: MyText(
-              text: "${_itemCount.toString()}",
-              color: kwhiteColor,
+            child: Center(
+              child: MyText(
+                text: "${_itemCount.toString()}",
+                color: kwhiteColor,
+              ),
             ),
           ),
           Expanded(

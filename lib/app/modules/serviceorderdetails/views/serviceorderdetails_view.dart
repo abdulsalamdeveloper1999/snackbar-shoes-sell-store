@@ -149,19 +149,25 @@ class ServiceorderdetailsView extends GetView<ServiceorderdetailsController> {
   Widget _anotherStepper() {
     List<StepperData> stepperData = [
       StepperData(
-        title: "Order placed on 07 january",
+        title: "Order placed on January 22",
       ),
       StepperData(
-        title: "Processing",
+        title: "Pickup at Sept 22, 2022",
       ),
       StepperData(
-        title: "Ready for shipping",
+        title: "Assesment",
       ),
       StepperData(
-        title: "Deliver at 27 sept 2022",
+        title: "Cleaning",
       ),
       StepperData(
-        title: "Completed",
+        title: "Finishing Touches",
+      ),
+      StepperData(
+        title: "Ready for Pickup",
+      ),
+      StepperData(
+        title: "Deliver at Sept 25, 2022 & 8 am - 9 am",
       ),
     ];
 

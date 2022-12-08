@@ -7,6 +7,7 @@ import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:snackbar/Constants/constants.dart';
 import 'package:snackbar/Widgets/login_field.dart';
 import 'package:snackbar/Widgets/my_text.dart';
+import 'package:snackbar/app/modules/orderdetails/views/orderdetails_view.dart';
 import 'package:snackbar/app/routes/app_pages.dart';
 
 import '../../../../Widgets/appbars.dart';
@@ -128,46 +129,7 @@ Widget _cartContainer() {
             )
           ],
         ),
-        Row(
-          children: [
-            Container(
-              width: 60.w,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      _controller.decrement();
-                    },
-                    child: SvgPicture.asset(
-                      'assets/icons/remove.svg',
-                      height: 20.h,
-                      width: 20.h,
-                    ),
-                  ),
-                  Obx(
-                    () => MyText(
-                      text: "${_controller.count}",
-                      size: 14.sp,
-                      weight: ksixweight,
-                      color: kwhiteColor,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      _controller.increment();
-                    },
-                    child: SvgPicture.asset(
-                      'assets/icons/positive.svg',
-                      height: 20.h,
-                      width: 20.h,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+        counterMethod()
       ],
     ),
   );

@@ -24,7 +24,7 @@ class _BottombarViewState extends State<BottombarView> {
   List _widgetOptions = [
     ProductView(),
     ServiceView(),
-    AuthenticView(),
+    // AuthenticView(),
     NotificationsView(),
     ProfileView(),
   ];
@@ -69,16 +69,23 @@ class _BottombarViewState extends State<BottombarView> {
           selectedLabelStyle: selectedLabelStyle,
           items: [
             bottombarItem(
-                iconUri: "assets/icons/bproducts.svg", titleText: 'Products'),
+              iconUri: "assets/icons/bproducts.svg",
+              titleText: 'Products',
+            ),
             bottombarItem(
-                iconUri: "assets/icons/bservice.svg", titleText: 'Service'),
+              iconUri: "assets/icons/bservice.svg",
+              titleText: 'Service',
+            ),
+            // bottombarItem(
+            //     iconUri: 'assets/icons/bauthentic.svg', titleText: 'Authentic'),
             bottombarItem(
-                iconUri: 'assets/icons/bauthentic.svg', titleText: 'Authentic'),
+              iconUri: 'assets/icons/bnotification.svg',
+              titleText: 'Notifications',
+            ),
             bottombarItem(
-                iconUri: 'assets/icons/bnotification.svg',
-                titleText: 'Notification'),
-            bottombarItem(
-                iconUri: 'assets/icons/bprofile.svg', titleText: 'Profile'),
+              iconUri: 'assets/icons/bprofile.svg',
+              titleText: 'Profile',
+            ),
           ],
           type: BottomNavigationBarType.shifting,
           currentIndex: _selectedIndex,

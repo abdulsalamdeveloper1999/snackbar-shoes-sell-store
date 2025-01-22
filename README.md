@@ -1,16 +1,28 @@
-# snackbar
+# Snackbar - Preloved Shoes Marketplace
 
-A new Flutter project.
+A modern Flutter application for buying and selling preloved shoes. The app provides a seamless experience for users to browse, buy, and sell second-hand footwear.
+
+## Features
+
+- Real-time product listings and updates
+- User authentication and profile management
+- In-app messaging between buyers and sellers
+- Advanced search and filtering options
+- Secure payment integration
+- Image upload and management
+- Push notifications
+
+## Tech Stack
+
+- **Frontend:** Flutter
+- **State Management:** GetX
+- **Backend:** Firebase
+- **Authentication:** Firebase Auth
+- **Database:** Cloud Firestore
+- **Storage:** Firebase Storage
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/snackbar.git

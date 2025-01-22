@@ -21,8 +21,4 @@ A modern Flutter application for buying and selling preloved shoes. The app prov
 - **Database:** Cloud Firestore
 - **Storage:** Firebase Storage
 
-## Getting Started
 
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/snackbar.git
